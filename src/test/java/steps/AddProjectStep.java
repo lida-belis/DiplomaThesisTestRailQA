@@ -4,6 +4,7 @@ import baseEntity.BaseStep;
 import core.BrowsersService;
 import io.qameta.allure.Step;
 import pages.AddProjectPage;
+import pages.ProjectPage;
 
 public class AddProjectStep extends BaseStep {
 
@@ -27,5 +28,9 @@ public class AddProjectStep extends BaseStep {
                 addProjectPage.suiteModeMultiSelectorOption.click();
                 break;
         }
+        addProjectPage.addProjectButton.submit();
+
+        ProjectPage projectPage = new ProjectPage(browsersService);
+        projectPage.dashboardButton.submit();
     }
 }

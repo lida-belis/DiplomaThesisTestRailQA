@@ -7,6 +7,21 @@ import org.openqa.selenium.support.FindBy;
 
 public class MilestonesEditPage extends BasePageFactory {
 
+    //Всплывающее окно "?"
+    @FindBy(className = "icon-markdown-help")
+    public WebElement iconHelp;
+
+    //Кнопка для загрузки файла
+    @FindBy(className = "icon-markdown-image")
+    public WebElement iconImage;
+
+    //Добавить файл
+    @FindBy(id = "attachmentDropzone")
+    public WebElement addImage;
+
+    @FindBy(xpath = "//*[@id='attachmentSubmit']/span[2]")
+    public WebElement addImageButton;
+
     //Поле StartDate
     @FindBy(id = "start_on")
     public WebElement startDateField;
