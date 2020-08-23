@@ -10,6 +10,9 @@ public class OverviewPage extends BasePageFactory {
     @FindBy(id = "navigation-overview-addmilestones")
     public WebElement addMilestonesButton;
 
+    @FindBy(id = "navigation-overview-addmilestones")
+    public WebElement pageIdentifier;
+
     public OverviewPage(BrowsersService browsersService) {
         super(browsersService, false);
     }
@@ -21,6 +24,6 @@ public class OverviewPage extends BasePageFactory {
 
     @Override
     public boolean isPageOpened() {
-        return false;
+        return pageIdentifier.isDisplayed();
     }
 }
