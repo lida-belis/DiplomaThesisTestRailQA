@@ -20,7 +20,6 @@ public class MilestonesEditPage extends BasePageFactory {
     public WebElement deleteStonesButton;
 
 
-
     public MilestonesEditPage(BrowsersService browsersService) {
         super(browsersService, false);
     }
