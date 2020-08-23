@@ -19,7 +19,6 @@ public class MilestonesEditPage extends BasePageFactory {
     @FindBy(xpath = "//a[text()='Delete this milestone']")
     public WebElement deleteStonesButton;
 
-
     public MilestonesEditPage(BrowsersService browsersService) {
         super(browsersService, false);
     }
