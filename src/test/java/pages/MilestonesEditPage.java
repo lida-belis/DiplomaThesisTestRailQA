@@ -19,6 +19,15 @@ public class MilestonesEditPage extends BasePageFactory {
     @FindBy(xpath = "//a[text()='Delete this milestone']")
     public WebElement deleteStonesButton;
 
+    //Поставить галочку в диалоговом окне
+    @FindBy(xpath = "//span[@class='dialog-confirm-busy']/../input")
+    public WebElement deleteStonesButtonV;
+
+    //Нажать ОК в диалоговом окне
+    @FindBy(xpath = "//div[@id='dialog-ident-deleteDialog']/div[@id='deleteDialog']" +
+            "/div[@class='button-group dialog-buttons-highlighted']/a")
+    public WebElement deleteStonesButtonOk;
+
     public MilestonesEditPage(BrowsersService browsersService) {
         super(browsersService, false);
     }
@@ -30,6 +39,6 @@ public class MilestonesEditPage extends BasePageFactory {
 
     @Override
     public boolean isPageOpened() {
-        return false;
+        return deleteStonesButton.isDisplayed();
     }
 }

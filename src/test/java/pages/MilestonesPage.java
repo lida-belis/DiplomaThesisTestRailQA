@@ -28,6 +28,6 @@ public class MilestonesPage extends BasePageFactory {
 
     @Override
     public boolean isPageOpened() {
-        return false;
+        return stonesNameField.isDisplayed();
     }
 }
