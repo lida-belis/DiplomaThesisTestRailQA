@@ -10,8 +10,8 @@ public class DashboardPage extends BasePageFactory {
     @FindBy(id = "sidebar-projects-add")
     public WebElement addProjectButton;
 
-    public DashboardPage(BrowsersService browsersService, boolean openPageByUrl) {
-        super(browsersService, openPageByUrl);
+    public DashboardPage(BrowsersService browsersService) {
+        super(browsersService, false);
     }
 
     @Override

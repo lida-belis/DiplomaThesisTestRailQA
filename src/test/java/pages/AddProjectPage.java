@@ -25,8 +25,8 @@ public class AddProjectPage extends BasePageFactory {
     @FindBy(id = "accept")
     public WebElement addProjectButton;
 
-    public AddProjectPage(BrowsersService browsersService, boolean openPageByUrl) {
-        super(browsersService, openPageByUrl);
+    public AddProjectPage(BrowsersService browsersService) {
+        super(browsersService, false);
     }
 
     @Override

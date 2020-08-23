@@ -1,7 +1,7 @@
 package models;
 
 public class User {
-    private String username;
+    private String email;
     private String password;
 
     public static class Builder{
@@ -11,8 +11,8 @@ public class User {
             newUser = new User();
         }
 
-        public Builder withUsername(String username) {
-            newUser.username = username;
+        public Builder withEmail(String email) {
+            newUser.email = email;
             return this;
         }
 
@@ -26,8 +26,8 @@ public class User {
         }
     }
 
-    public String getUsername() {
-        return username;
+    public String getEmail() {
+        return email;
     }
 
     public String getPassword() {

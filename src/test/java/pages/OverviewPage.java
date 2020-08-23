@@ -10,8 +10,8 @@ public class OverviewPage extends BasePageFactory {
     @FindBy(id = "navigation-overview-addmilestones")
     public WebElement addMilestonesButton;
 
-    public OverviewPage(BrowsersService browsersService, boolean openPageByUrl) {
-        super(browsersService, openPageByUrl);
+    public OverviewPage(BrowsersService browsersService) {
+        super(browsersService, false);
     }
 
     @Override

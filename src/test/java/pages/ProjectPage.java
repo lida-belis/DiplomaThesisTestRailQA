@@ -13,8 +13,8 @@ public class ProjectPage  extends BasePageFactory {
     @FindBy(id = "navigation-dashboard")
     public WebElement dashboardButton;
 
-    public ProjectPage(BrowsersService browsersService, boolean openPageByUrl) {
-        super(browsersService, openPageByUrl);
+    public ProjectPage(BrowsersService browsersService) {
+        super(browsersService, false);
     }
 
     @Override
