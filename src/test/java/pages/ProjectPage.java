@@ -13,6 +13,9 @@ public class ProjectPage  extends BasePageFactory {
     @FindBy(id = "navigation-dashboard")
     public WebElement dashboardButton;
 
+    @FindBy(css = "button button-left button-add")
+    public WebElement addProjectButton;
+
     public ProjectPage(BrowsersService browsersService) {
         super(browsersService, false);
     }
@@ -24,6 +27,6 @@ public class ProjectPage  extends BasePageFactory {
 
     @Override
     public boolean isPageOpened() {
-        return pageIdentifier.isDisplayed();
+        return browsersService.getDriver().getTitle().equalsIgnoreCase("Projects - TestRail");
     }
 }

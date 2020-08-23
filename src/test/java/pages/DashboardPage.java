@@ -24,6 +24,7 @@ public class DashboardPage extends BasePageFactory {
 
     @Override
     public boolean isPageOpened() {
-        return pageIdentifier.getText().equalsIgnoreCase("All Projects");
+ //       return pageIdentifier.getText().equalsIgnoreCase("All Projects");
+        return addProjectButton.isDisplayed();
     }
 }
