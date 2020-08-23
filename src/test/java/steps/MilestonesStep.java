@@ -7,15 +7,14 @@ import pages.MilestonesPage;
 
 public class MilestonesStep extends BaseStep {
 
-    public MilestonesStep(BrowsersService browsersService){
+    public MilestonesStep(BrowsersService browsersService) {
         super(browsersService);
     }
 
     @Step
-    public void milestones(){
+    public void milestones() {
         MilestonesPage milestonesPage = new MilestonesPage(browsersService);
 
         milestonesPage.editStonesButton.click();
     }
-
 }

@@ -3,10 +3,8 @@ package steps;
 import baseEntity.BaseStep;
 import core.BrowsersService;
 import io.qameta.allure.Step;
-import org.openqa.selenium.By;
 import pages.AddProjectPage;
 import pages.ProjectPage;
-import utils.Waiters;
 
 public class AddProjectStep extends BaseStep {
 
@@ -34,6 +32,5 @@ public class AddProjectStep extends BaseStep {
 
         ProjectPage projectPage = new ProjectPage(browsersService);
         projectPage.dashboardButton.click();
-
     }
 }

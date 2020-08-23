@@ -12,11 +12,10 @@ public class MilestonesEditStep extends BaseStep {
     }
 
     @Step
-    public void deleteMilestones(){
+    public void deleteMilestones() {
         MilestonesEditPage milestonesEditPage = new MilestonesEditPage(browsersService);
         milestonesEditPage.deleteStonesButton.click();
         milestonesEditPage.deleteStonesButtonV.click();
         milestonesEditPage.deleteStonesButtonOk.click();
-
     }
 }

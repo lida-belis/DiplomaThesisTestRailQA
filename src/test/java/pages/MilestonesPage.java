@@ -1,6 +1,5 @@
 package pages;
 
-
 import baseEntity.BasePageFactory;
 import core.BrowsersService;
 import org.openqa.selenium.WebElement;

@@ -10,9 +10,6 @@ public class DashboardPage extends BasePageFactory {
     @FindBy(id = "sidebar-projects-add")
     public WebElement addProjectButton;
 
-    @FindBy(className = "content-header-title page_title")
-    public WebElement pageIdentifier;
-
     public DashboardPage(BrowsersService browsersService) {
         super(browsersService, false);
     }
@@ -24,7 +21,6 @@ public class DashboardPage extends BasePageFactory {
 
     @Override
     public boolean isPageOpened() {
- //       return pageIdentifier.getText().equalsIgnoreCase("All Projects");
         return addProjectButton.isDisplayed();
     }
 }
