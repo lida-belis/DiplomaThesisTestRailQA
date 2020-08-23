@@ -2,13 +2,10 @@ package uiTests.positive;
 
 import baseEntity.BaseTest;
 import models.User;
-import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.LoginPage;
 import steps.AddProjectStep;
 import steps.DashboardStep;
 import steps.LoginStep;
-import steps.ProjectStep;
 
 public class AddMilestones extends BaseTest {
 
@@ -26,9 +23,6 @@ public class AddMilestones extends BaseTest {
 
         AddProjectStep addProjectStep = new AddProjectStep(browsersService);
         addProjectStep.addNewProject("Lida_Vladimir", "Use a single repository for all cases (recommended)");
-
-        ProjectStep projectStep = new ProjectStep(browsersService);
-        projectStep.clickDashboard();
 
 
     }

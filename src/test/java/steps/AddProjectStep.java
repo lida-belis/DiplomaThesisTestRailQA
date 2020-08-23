@@ -32,5 +32,8 @@ public class AddProjectStep extends BaseStep {
         }
         addProjectPage.addProjectButton.submit();
 
+        ProjectPage projectPage = new ProjectPage(browsersService);
+        projectPage.dashboardButton.click();
+
     }
 }
