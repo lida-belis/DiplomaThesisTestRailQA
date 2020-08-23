@@ -5,12 +5,12 @@ import core.BrowsersService;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class DashboardPage extends BasePageFactory {
+public class OverviewPage extends BasePageFactory {
 
-    @FindBy(id = "sidebar-projects-add")
-    public WebElement addProjectButton;
+    @FindBy(id = "navigation-overview-addmilestones")
+    public WebElement addMilestonesButton;
 
-    public DashboardPage(BrowsersService browsersService) {
+    public OverviewPage(BrowsersService browsersService) {
         super(browsersService, false);
     }
 
