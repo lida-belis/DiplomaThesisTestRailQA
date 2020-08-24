@@ -3,9 +3,8 @@ package uiTests.positive;
 import baseEntity.BaseTest;
 import models.User;
 import org.testng.annotations.Test;
-import steps.AddProjectStep;
-import steps.DashboardStep;
-import steps.LoginStep;
+import pages.MilestonesEditPage;
+import steps.*;
 
 public class AddMilestones extends BaseTest {
 
@@ -23,6 +22,14 @@ public class AddMilestones extends BaseTest {
 
         AddProjectStep addProjectStep = new AddProjectStep(browsersService);
         addProjectStep.addNewProject("Lida_Vladimir", "Use a single repository for all cases (recommended)");
+        dashboardStep.enterProject();
+
+        AddMilestonesStep addMilestonesStep = new AddMilestonesStep(browsersService);
+        addMilestonesStep.addMilestones();
+
+        MilestonesEditStep milestonesEditStep = new MilestonesEditStep(browsersService);
+        milestonesEditStep.deleteMilestones();
+
     }
 }
 

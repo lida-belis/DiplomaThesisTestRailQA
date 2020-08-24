@@ -10,6 +10,9 @@ public class DashboardPage extends BasePageFactory {
     @FindBy(id = "sidebar-projects-add")
     public WebElement addProjectButton;
 
+    @FindBy(xpath = "//div/a[text()='Lida_Vladimir']")
+    public WebElement nameProjectButton;
+
     public DashboardPage(BrowsersService browsersService) {
         super(browsersService, false);
     }

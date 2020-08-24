@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 public class MilestonesAddPage extends BasePageFactory {
 
     //Поле Name*
-    @FindBy(xpath = "//label[@for='name']/../input[@id='name']")
+    @FindBy(id = "name")
     public WebElement nameMilestonesField;
 
     //Кнопка "Add Milestone"

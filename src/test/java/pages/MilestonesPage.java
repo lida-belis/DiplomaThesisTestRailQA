@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 public class MilestonesPage extends BasePageFactory {
 
     // Проверка, что milestones с названием 'MilestoneDiploma' отобразился на странице
-    @FindBy(xpath = "//a[text()='MilestoneDiploma']")
+    @FindBy(xpath = "//a[text()='Cool']")
     public WebElement stonesNameField;
 
     // Нажатие на кнопку Edit
