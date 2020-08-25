@@ -1,14 +1,17 @@
-package uiTests.positive;
+package uiTests;
 
 import baseEntity.BaseTest;
 import models.User;
 import org.testng.annotations.Test;
-import steps.*;
+import steps.AddMilestonesStep;
+import steps.AddProjectStep;
+import steps.DashboardStep;
+import steps.LoginStep;
 
-public class AddMilestones extends BaseTest {
+public class PositiveTest extends BaseTest {
 
     @Test
-    public void addMilestones() {
+    public void DialogBoxAndFileUpload() {
         User user = new User.Builder()
                 .withEmail("atrostyanko+master@gmail.com")
                 .withPassword("QqtRK9elseEfAk6ilYcJ")
@@ -24,10 +27,6 @@ public class AddMilestones extends BaseTest {
         dashboardStep.enterProject();
 
         AddMilestonesStep addMilestonesStep = new AddMilestonesStep(browsersService);
-        addMilestonesStep.addMilestones();
-
-        MilestonesEditStep milestonesEditStep = new MilestonesEditStep(browsersService);
-        milestonesEditStep.deleteMilestones();
+        addMilestonesStep.dialogBoxAndFileUpload();
     }
 }
-
