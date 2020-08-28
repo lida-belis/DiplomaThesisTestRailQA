@@ -19,7 +19,6 @@ public class DashboardPage extends BasePageFactory {
 
     @Override
     protected void openPage() {
-
     }
 
     @Override
