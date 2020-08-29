@@ -10,8 +10,9 @@ import pages.MilestonesPage;
 import pages.OverviewPage;
 
 public class MilestonesStep extends BaseStep {
+
     OverviewPage overviewPage = new OverviewPage(browsersService);
-    AddMilestonesPage milestonesAddPage = new AddMilestonesPage(browsersService);
+    AddMilestonesPage addMilestonesPage = new AddMilestonesPage(browsersService);
     MilestonesPage milestonesPage = new MilestonesPage(browsersService);
 
     public MilestonesStep(BrowsersService browsersService) {
@@ -19,12 +20,12 @@ public class MilestonesStep extends BaseStep {
     }
 
     @Step
-    public void addMilestones() {
+    public void addMilestonesStep() {
 //        overviewPage.milestonesButton.click();
         overviewPage.addMilestonesButtonOver.click();
 //        milestonesPage.addMilestoneButton.click();
-        milestonesAddPage.nameMilestonesField.sendKeys("Cool");
-        milestonesAddPage.addMilestoneButton.click();
+        addMilestonesPage.nameMilestonesField.sendKeys("Cool");
+        addMilestonesPage.addMilestoneButton.click();
     }
 
     @Step
@@ -42,23 +43,23 @@ public class MilestonesStep extends BaseStep {
     public void dialogBoxAndFileUpload() {
         overviewPage.milestonesButton.click();
         milestonesPage.editStonesButton.click();
-        milestonesAddPage.dialogBox.click();
-        milestonesAddPage.fileUpload.sendKeys("D:/zoub1wL7Zo0-3");
-        milestonesAddPage.addImages.click();
-        milestonesAddPage.addMilestoneButton.click();
+        addMilestonesPage.dialogBox.click();
+        addMilestonesPage.fileUpload.sendKeys("D:/zoub1wL7Zo0-3");
+        addMilestonesPage.addImages.click();
+        addMilestonesPage.addMilestoneButton.click();
     }
 
     @Step
     public void incorrectDataUsage() {
         overviewPage.milestonesButton.click();
         milestonesPage.editStonesButton.click();
-        milestonesAddPage.startDateField.sendKeys("///");
-        milestonesAddPage.addMilestoneButton.click();
+        addMilestonesPage.startDateField.sendKeys("///");
+        addMilestonesPage.addMilestoneButton.click();
     }
 
     @Step
     public String getErrorMessage() {
-        WebElement errorMessage = milestonesAddPage.errorMessage;
+        WebElement errorMessage = addMilestonesPage.errorMessage;
         return errorMessage.getText();
     }
 }

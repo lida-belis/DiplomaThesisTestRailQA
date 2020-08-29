@@ -29,7 +29,7 @@ public class AddMilestonesPage extends BasePageFactory {
     public WebElement addImages;
 
     //Кнопка "Add Milestone"
-    @FindBy(xpath = "//button[@id='accept']")
+    @FindBy(id = "accept")
     public WebElement addMilestoneButton;
 
     //Error

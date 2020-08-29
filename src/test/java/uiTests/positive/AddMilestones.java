@@ -24,7 +24,7 @@ public class AddMilestones extends BaseTest {
         dashboardStep.enterProject();
 
         MilestonesStep milestonesStep = new MilestonesStep(browsersService);
-        milestonesStep.addMilestones();
+        milestonesStep.addMilestonesStep();
     }
 
     @Test
