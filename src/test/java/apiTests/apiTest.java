@@ -16,13 +16,13 @@ public class apiTest extends BaseTestApi {
 
     @Test
     public void getMilestone1() {
-        String endpoint = "index.php?/api/v2/get_milestones/114";
+        String endpoint = "index.php?/api/v2/get_milestone/27";
 
         given()
                 .when()
                 .get(endpoint)
                 .then().log().body()
-//                .body("id", equalTo(27))
+                .body("id", equalTo(27))
                 .statusCode(HttpStatus.SC_OK);
     }
 
