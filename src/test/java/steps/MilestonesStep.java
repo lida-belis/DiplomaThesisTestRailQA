@@ -11,10 +11,6 @@ import pages.OverviewPage;
 
 public class MilestonesStep extends BaseStep {
 
-//    OverviewPage overviewPage = new OverviewPage(browsersService);
-//    AddMilestonesPage addMilestonesPage = new AddMilestonesPage(browsersService);
-//    MilestonesPage milestonesPage = new MilestonesPage(browsersService);
-
     public MilestonesStep(BrowsersService browsersService) {
         super(browsersService);
     }
