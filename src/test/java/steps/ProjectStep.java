@@ -6,9 +6,9 @@ import io.qameta.allure.Step;
 import pages.AddProjectPage;
 import pages.ProjectPage;
 
-public class AddProjectStep extends BaseStep {
+public class ProjectStep extends BaseStep {
 
-    public AddProjectStep(BrowsersService browsersService) {
+    public ProjectStep(BrowsersService browsersService) {
         super(browsersService);
     }
 

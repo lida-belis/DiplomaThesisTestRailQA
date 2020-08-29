@@ -5,7 +5,7 @@ import core.BrowsersService;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class MilestonesAddPage extends BasePageFactory {
+public class AddMilestonesPage extends BasePageFactory {
 
     //Поле Name*
     @FindBy(id = "name")
@@ -36,7 +36,7 @@ public class MilestonesAddPage extends BasePageFactory {
     @FindBy(xpath = "//div[text()='Field Start Date is not in a valid date format.']")
     public WebElement errorMessage;
 
-    public MilestonesAddPage(BrowsersService browsersService) {
+    public AddMilestonesPage(BrowsersService browsersService) {
         super(browsersService, false);
     }
 

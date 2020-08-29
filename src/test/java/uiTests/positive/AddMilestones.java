@@ -8,7 +8,7 @@ import steps.*;
 public class AddMilestones extends BaseTest {
 
     @Test
-    public void addMilestones() {
+    public void addMilestonesTest() {
         User user = new User.Builder()
                 .withEmail("atrostyanko+master@gmail.com")
                 .withPassword("QqtRK9elseEfAk6ilYcJ")
@@ -19,15 +19,18 @@ public class AddMilestones extends BaseTest {
         DashboardStep dashboardStep = new DashboardStep(browsersService);
         dashboardStep.addProject();
 
-        AddProjectStep addProjectStep = new AddProjectStep(browsersService);
+        ProjectStep addProjectStep = new ProjectStep(browsersService);
         addProjectStep.addNewProject("Lida_Vladimir", "Use a single repository for all cases (recommended)");
         dashboardStep.enterProject();
 
-        AddMilestonesStep addMilestonesStep = new AddMilestonesStep(browsersService);
-        addMilestonesStep.addMilestones();
+        MilestonesStep milestonesStep = new MilestonesStep(browsersService);
+        milestonesStep.addMilestones();
+    }
 
-        MilestonesEditStep milestonesEditStep = new MilestonesEditStep(browsersService);
-        milestonesEditStep.deleteMilestones();
+    @Test
+    public void deleteMilestonesTest() {
+        MilestonesStep milestonesStep = new MilestonesStep(browsersService);
+        milestonesStep.deleteMilestones();
     }
 }
 

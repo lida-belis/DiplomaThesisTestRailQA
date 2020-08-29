@@ -13,6 +13,9 @@ public class OverviewPage extends BasePageFactory {
     @FindBy(id = "navigation-overview-addmilestones")
     public WebElement pageIdentifier;
 
+    @FindBy(id = "navigation-milestones")
+    public WebElement milestonesButton;
+
     public OverviewPage(BrowsersService browsersService) {
         super(browsersService, false);
     }

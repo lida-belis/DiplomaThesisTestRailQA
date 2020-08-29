@@ -5,7 +5,7 @@ import core.BrowsersService;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class MilestonesEditPage extends BasePageFactory {
+public class EditMilestonesPage extends BasePageFactory {
 
     //Кнопка "Delete this milestones"
     @FindBy(xpath = "//a[text()='Delete this milestone']")
@@ -20,7 +20,7 @@ public class MilestonesEditPage extends BasePageFactory {
             "/div[@class='button-group dialog-buttons-highlighted']/a")
     public WebElement deleteStonesButtonOk;
 
-    public MilestonesEditPage(BrowsersService browsersService) {
+    public EditMilestonesPage(BrowsersService browsersService) {
         super(browsersService, false);
     }
 
