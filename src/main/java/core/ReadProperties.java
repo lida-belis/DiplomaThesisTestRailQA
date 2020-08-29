@@ -30,4 +30,12 @@ public class ReadProperties {
     public int getTimeOut() {
         return Integer.parseInt(properties.getProperty("timeout"));
     }
+
+    public String getUsername() {
+        return properties.getProperty("apiusername");
+    }
+
+    public String getPassword() {
+        return properties.getProperty("apipassword");
+    }
 }

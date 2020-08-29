@@ -20,7 +20,9 @@ public class MilestonesStep extends BaseStep {
 
     @Step
     public void addMilestones() {
-        overviewPage.addMilestonesButton.click();
+//        overviewPage.milestonesButton.click();
+        overviewPage.addMilestonesButtonOver.click();
+//        milestonesPage.addMilestoneButton.click();
         milestonesAddPage.nameMilestonesField.sendKeys("Cool");
         milestonesAddPage.addMilestoneButton.click();
     }

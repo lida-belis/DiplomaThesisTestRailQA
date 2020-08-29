@@ -15,6 +15,9 @@ public class MilestonesPage extends BasePageFactory {
     @FindBy(xpath = "//a[text()='Edit']")
     public WebElement editStonesButton;
 
+    @FindBy(className = "sidebar-button")
+    public WebElement addMilestoneButton;
+
 
     public MilestonesPage(BrowsersService browsersService) {
         super(browsersService, false);
@@ -27,6 +30,7 @@ public class MilestonesPage extends BasePageFactory {
 
     @Override
     public boolean isPageOpened() {
-        return stonesNameField.isDisplayed();
+//        return stonesNameField.isDisplayed();
+        return addMilestoneButton.isDisplayed();
     }
 }

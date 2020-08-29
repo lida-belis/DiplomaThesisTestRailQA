@@ -21,11 +21,21 @@ public class Listener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult tr) {
         Object currentClass = tr.getInstance();
+        try {
+            WebDriver driver = ((BaseTest) currentClass).browsersService.getDriver();
+            byte[] srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+            saveScreenshot(srcFile);
+        } catch (Exception exception) {
+
+        }
+    }
+/*
+        Object currentClass = tr.getInstance();
         WebDriver driver = ((BaseTest) currentClass).browsersService.getDriver();
         byte[] srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
         saveScreenshot(srcFile);
     }
-
+*/
     @Attachment(value = "Page screenshot", type = "image/png")
     private byte[] saveScreenshot(byte[] screenshot) {
         return screenshot;

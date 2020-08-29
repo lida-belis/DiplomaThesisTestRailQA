@@ -14,7 +14,7 @@ public class DashboardStep extends BaseStep {
 
     @Step
     public void addProject() {
-        dashboardPage.addProjectButton.click();
+        dashboardPage.addProjectButtonDash.click();
     }
 
     @Step
