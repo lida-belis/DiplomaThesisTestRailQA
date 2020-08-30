@@ -56,6 +56,7 @@ public class MilestonesStep extends BaseStep {
         milestonesPage.editStonesButton.click();
         AddMilestonesPage addMilestonesPage = new AddMilestonesPage(browsersService);
         addMilestonesPage.startDateField.sendKeys("///");
+        addMilestonesPage.nameMilestonesField.click();
         addMilestonesPage.addMilestoneButton.click();
     }
 
@@ -64,5 +65,46 @@ public class MilestonesStep extends BaseStep {
         AddMilestonesPage addMilestonesPage = new AddMilestonesPage(browsersService);
         WebElement errorMessage = addMilestonesPage.errorMessage;
         return errorMessage.getText();
+    }
+
+    @Step
+    public void edgeValue(){
+        OverviewPage overviewPage = new OverviewPage(browsersService);
+        overviewPage.milestonesButton.click();
+        MilestonesPage milestonesPage = new MilestonesPage(browsersService);
+        milestonesPage.editStonesButton.click();
+        AddMilestonesPage addMilestonesPage = new AddMilestonesPage(browsersService);
+        addMilestonesPage.startDateField.sendKeys("31/12/1969");
+        addMilestonesPage.nameMilestonesField.click();
+        addMilestonesPage.nameMilestonesField.clear();
+        addMilestonesPage.addMilestoneButton.click();
+
+    }
+
+    @Step
+    public void edgeValue2(){
+        AddMilestonesPage addMilestonesPage = new AddMilestonesPage(browsersService);
+        addMilestonesPage.startDateField.clear();
+        addMilestonesPage.startDateField.sendKeys("1/1/1970");
+        addMilestonesPage.nameMilestonesField.click();
+        addMilestonesPage.addMilestoneButton.click();
+
+    }
+
+    @Step
+    public String getErrorMessage2() {
+        AddMilestonesPage addMilestonesPage2 = new AddMilestonesPage(browsersService);
+        WebElement errorMessage2 = addMilestonesPage2.errorMessage2;
+        return errorMessage2.getText();
+    }
+    @Step
+    public void upMessage() {
+        OverviewPage overviewPage = new OverviewPage(browsersService);
+        overviewPage.milestonesButton.click();
+        MilestonesPage milestonesPage = new MilestonesPage(browsersService);
+        milestonesPage.editStonesButton.click();
+        AddMilestonesPage addMilestonesPage = new AddMilestonesPage(browsersService);
+//        addMilestonesPage.upMessage.
+
     }
 }

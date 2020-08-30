@@ -6,7 +6,7 @@ import io.qameta.allure.Step;
 import pages.DashboardPage;
 
 public class DashboardStep extends BaseStep {
-    DashboardPage dashboardPage = new DashboardPage(browsersService);
+
 
     public DashboardStep(BrowsersService browsersService) {
         super(browsersService);
@@ -14,11 +14,13 @@ public class DashboardStep extends BaseStep {
 
     @Step
     public void addProject() {
+        DashboardPage dashboardPage = new DashboardPage(browsersService);
         dashboardPage.addProjectButtonDash.click();
     }
 
     @Step
     public void enterProject(){
+        DashboardPage dashboardPage = new DashboardPage(browsersService);
         dashboardPage.nameProjectButton.click();
     }
 }

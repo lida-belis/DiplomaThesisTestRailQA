@@ -22,6 +22,9 @@ public class AddMilestonesPage extends BasePageFactory {
     @FindBy(className = "icon-markdown-image")
     public WebElement dialogBox;
 
+    @FindBy(className = "icon-markdown-help")
+    public WebElement upMessage;
+
     @FindBy(id = "attachmentDropzone")
     public WebElement fileUpload;
 
@@ -35,6 +38,9 @@ public class AddMilestonesPage extends BasePageFactory {
     //Error
     @FindBy(xpath = "//div[text()='Field Start Date is not in a valid date format.']")
     public WebElement errorMessage;
+
+    @FindBy(xpath = "//div[text()='Field Name is a required field.']")
+    public WebElement errorMessage2;
 
     public AddMilestonesPage(BrowsersService browsersService) {
         super(browsersService, false);
