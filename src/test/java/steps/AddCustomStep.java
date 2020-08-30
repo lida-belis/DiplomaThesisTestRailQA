@@ -4,8 +4,8 @@ import baseEntity.BaseStep;
 import core.BrowsersService;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
-import pages.AddCustomField;
-import pages.AddMilestonesPage;
+import pages.AddCustomFieldPage;
+import pages.ErrorPage;
 
 public class AddCustomStep extends BaseStep {
 
@@ -15,17 +15,17 @@ public class AddCustomStep extends BaseStep {
 
     @Step
     public void limitingValues() {
-        AddCustomField addCustomField = new AddCustomField(browsersService);
+        AddCustomFieldPage addCustomField = new AddCustomFieldPage(browsersService, true);
         addCustomField.addCaseField.click();
         addCustomField.labelField.sendKeys("Hi");
-        addCustomField.systemNameField.sendKeys("qwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopasdfghj");
+        addCustomField.systemNameField.sendKeys("qwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopasdfghjq");
         addCustomField.addFieldButton.click();
     }
 
     @Step
     public String getErrorMessage() {
-        AddCustomField addCustomField = new AddCustomField(browsersService);
-        WebElement errorMessage = addCustomField.messageError;
-        return errorMessage.getText();
+        ErrorPage errorPage = new ErrorPage(browsersService);
+        WebElement messageError = errorPage.messageError;
+        return messageError.getText();
     }
 }

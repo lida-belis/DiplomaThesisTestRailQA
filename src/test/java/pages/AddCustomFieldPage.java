@@ -5,7 +5,7 @@ import core.BrowsersService;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class AddCustomField extends BasePageFactory {
+public class AddCustomFieldPage extends BasePageFactory {
 
     @FindBy(xpath = "//a[@href='index.php?/admin/fields/add/1']")
     public WebElement addCaseField;
@@ -19,11 +19,10 @@ public class AddCustomField extends BasePageFactory {
     @FindBy(id = "name")
     public WebElement systemNameField;
 
-    @FindBy(xpath = "//h1[text()='An Error Occurred']")
-    public WebElement messageError;
 
-    public AddCustomField(BrowsersService browsersService) {
-        super(browsersService, false);
+
+    public AddCustomFieldPage(BrowsersService browsersService, boolean openPageByUrl) {
+        super(browsersService, openPageByUrl);
     }
 
     @Override
@@ -33,6 +32,6 @@ public class AddCustomField extends BasePageFactory {
 
     @Override
     public boolean isPageOpened() {
-        return addFieldButton.isDisplayed();
+        return addCaseField.isDisplayed();
     }
 }
