@@ -43,7 +43,8 @@ public class MilestonesStep extends BaseStep {
         milestonesPage.editStonesButton.click();
         AddMilestonesPage addMilestonesPage = new AddMilestonesPage(browsersService);
         addMilestonesPage.dialogBox.click();
-        addMilestonesPage.fileUpload.sendKeys("D:/zoub1wL7Zo0-3");
+        addMilestonesPage.downloadButton.click();
+        addMilestonesPage.fileUpload.sendKeys("C:\\Users\\DELL\\Downloads\\zoub1wL7Zo0-3");
         addMilestonesPage.addImages.click();
         addMilestonesPage.addMilestoneButton.click();
     }

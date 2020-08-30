@@ -26,6 +26,9 @@ public class AddMilestonesPage extends BasePageFactory {
     public WebElement upMessage;
 
     @FindBy(id = "attachmentDropzone")
+    public WebElement downloadButton;
+
+    @FindBy(xpath = "/html/body/input[2]")
     public WebElement fileUpload;
 
     @FindBy(id = "attachmentSubmit")
