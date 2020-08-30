@@ -27,17 +27,5 @@ public class EnviromentTest extends BaseTest {
         milestonesStep.addMilestonesStep();
     }
 
-    @Test
-    public void deleteProjectTest() {
-        User user = new User.Builder()
-                .withEmail("atrostyanko+master@gmail.com")
-                .withPassword("QqtRK9elseEfAk6ilYcJ")
-                .build();
-        LoginStep loginStep = new LoginStep(browsersService);
-        loginStep.login(user);
-
-       AdministrationStep administrationStep = new AdministrationStep(browsersService);
-       administrationStep.deleteProjectStep();
-    }
 }
 
