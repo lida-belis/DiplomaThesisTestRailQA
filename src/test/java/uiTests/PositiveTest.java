@@ -43,4 +43,18 @@ public class PositiveTest extends BaseTest {
         milestonesStep.edgeValue2();
         Assert.assertEquals(milestonesStep.getErrorMessage2(), "Field Name is a required field.");
     }
+
+    @Test
+    public void limitValueTest() {
+        User user = new User.Builder()
+                .withEmail("atrostyanko+master@gmail.com")
+                .withPassword("QqtRK9elseEfAk6ilYcJ")
+                .build();
+        LoginStep loginStep = new LoginStep(browsersService);
+        loginStep.login(user);
+
+        AddCustomStep addCustomStep = new AddCustomStep(browsersService);
+        addCustomStep.limitingValues();
+        Assert.assertEquals(addCustomStep.getErrorMessage(), "An Error Occurred");
+    }
 }
