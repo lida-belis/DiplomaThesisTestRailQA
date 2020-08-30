@@ -54,8 +54,6 @@ public class PositiveTest extends BaseTest {
         LoginStep loginStep = new LoginStep(browsersService);
         loginStep.login(user);
 
-//        DashboardPage dashboardPage = new DashboardPage(browsersService);
-
         AddCustomStep addCustomStep = new AddCustomStep(browsersService);
         addCustomStep.limitingValues();
 

@@ -3,7 +3,7 @@
 <suite name="Suite1">
     <test name="SmokeTest">
         <classes>
-            <class name="uiTests.positive.AddMilestones"></class>
+            <class name="uiTests.EnviromentTest"></class>
         </classes>
     </test>
 </suite>

@@ -1,11 +1,11 @@
-package uiTests.positive;
+package uiTests;
 
 import baseEntity.BaseTest;
 import models.User;
 import org.testng.annotations.Test;
 import steps.*;
 
-public class AddMilestones extends BaseTest {
+public class EnviromentTest extends BaseTest {
 
     @Test
     public void addMilestonesTest() {
