@@ -28,7 +28,7 @@ public class AddMilestones extends BaseTest {
     }
 
     @Test
-    public void deleteMilestonesTest() {
+    public void deleteProjectTest() {
         User user = new User.Builder()
                 .withEmail("atrostyanko+master@gmail.com")
                 .withPassword("QqtRK9elseEfAk6ilYcJ")
@@ -36,11 +36,8 @@ public class AddMilestones extends BaseTest {
         LoginStep loginStep = new LoginStep(browsersService);
         loginStep.login(user);
 
-        DashboardStep dashboardStep = new DashboardStep(browsersService);
-        dashboardStep.enterProject();
-
-        MilestonesStep milestonesStep = new MilestonesStep(browsersService);
-        milestonesStep.deleteMilestones();
+       AdministrationStep administrationStep = new AdministrationStep(browsersService);
+       administrationStep.deleteProjectStep();
     }
 }
 

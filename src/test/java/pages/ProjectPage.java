@@ -10,6 +10,16 @@ public class ProjectPage extends BasePageFactory {
     @FindBy(id = "navigation-dashboard")
     public WebElement dashboardButton;
 
+    @FindBy(xpath = "//a[text()='Lida_Vladimir']/ancestor::tr//div[@class='icon-small-delete']")
+    public WebElement deleteProjectButton;
+
+    @FindBy(xpath = "//span[@class='dialog-confirm-busy']/../input")
+    public WebElement deleteProjectButtonV;
+
+    @FindBy(xpath = "//div[@id='deleteDialog']" +
+            "/div[@class='button-group dialog-buttons-highlighted']/a")
+    public WebElement deleteProjectButtonOk;
+
     public ProjectPage(BrowsersService browsersService) {
         super(browsersService, false);
     }

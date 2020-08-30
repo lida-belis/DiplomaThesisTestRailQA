@@ -16,7 +16,7 @@ public class EditMilestonesPage extends BasePageFactory {
     public WebElement deleteStonesButtonV;
 
     //Нажать ОК в диалоговом окне
-    @FindBy(xpath = "//div[@id='dialog-ident-deleteDialog']/div[@id='deleteDialog']" +
+    @FindBy(xpath = "//div[@id='deleteDialog']" +
             "/div[@class='button-group dialog-buttons-highlighted']/a")
     public WebElement deleteStonesButtonOk;
 
