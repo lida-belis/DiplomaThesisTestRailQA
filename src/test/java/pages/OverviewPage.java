@@ -10,9 +10,6 @@ public class OverviewPage extends BasePageFactory {
     @FindBy(id = "sidebar-milestones-add")
     public WebElement addMilestonesButtonOver;
 
-    @FindBy(id = "navigation-overview-addmilestones")
-    public WebElement pageIdentifier;
-
     @FindBy(id = "navigation-milestones")
     public WebElement milestonesButton;
 

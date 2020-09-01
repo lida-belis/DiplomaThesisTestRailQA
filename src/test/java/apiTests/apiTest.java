@@ -10,14 +10,14 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
 public class apiTest extends BaseTestApi {
-    int projectID;
+    int milestoneID;
 
     @Test
     public void getMilestone200() {
         String endpoint = "index.php?/api/v2/get_milestone/{milestone_id}";
 
         given()
-                .pathParam("milestone_id", projectID)
+                .pathParam("milestone_id", milestoneID)
                 .when()
                 .get(endpoint)
                 .then().log().body()
@@ -56,7 +56,7 @@ public class apiTest extends BaseTestApi {
                 .withName("Lida")
                 .build();
 
-        projectID = given()
+        milestoneID = given()
                 .body(project, ObjectMapperType.GSON)
                 .when()
                 .post(endpoint)
