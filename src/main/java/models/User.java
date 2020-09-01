@@ -4,7 +4,7 @@ public class User {
     private String email;
     private String password;
 
-    public static class Builder{
+    public static class Builder {
         private User newUser;
 
         public Builder() {

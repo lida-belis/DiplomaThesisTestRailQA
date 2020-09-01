@@ -29,13 +29,7 @@ public class Listener implements ITestListener {
 
         }
     }
-/*
-        Object currentClass = tr.getInstance();
-        WebDriver driver = ((BaseTest) currentClass).browsersService.getDriver();
-        byte[] srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-        saveScreenshot(srcFile);
-    }
-*/
+
     @Attachment(value = "Page screenshot", type = "image/png")
     private byte[] saveScreenshot(byte[] screenshot) {
         return screenshot;

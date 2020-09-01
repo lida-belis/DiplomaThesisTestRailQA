@@ -28,6 +28,5 @@ public class OverviewPage extends BasePageFactory {
     @Override
     public boolean isPageOpened() {
         return addMilestonesButtonOver.isDisplayed();
-//        return browsersService.getDriver().getTitle().equalsIgnoreCase("Overview - TestRail");
     }
 }

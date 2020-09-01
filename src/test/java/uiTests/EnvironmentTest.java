@@ -26,6 +26,5 @@ public class EnvironmentTest extends BaseTest {
         MilestonesStep milestonesStep = new MilestonesStep(browsersService);
         milestonesStep.addMilestonesStep();
     }
-
 }
 

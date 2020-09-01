@@ -59,7 +59,9 @@ public class BrowsersService {
         return waiters;
     }
 
-    public String getBaseUrl() { return baseUrl; }
+    public String getBaseUrl() {
+        return baseUrl;
+    }
 
     public void sleep(long millis) {
         try {

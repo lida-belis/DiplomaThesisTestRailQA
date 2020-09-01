@@ -19,8 +19,6 @@ public class AddCustomFieldPage extends BasePageFactory {
     @FindBy(id = "name")
     public WebElement systemNameField;
 
-
-
     public AddCustomFieldPage(BrowsersService browsersService, boolean openPageByUrl) {
         super(browsersService, openPageByUrl);
     }

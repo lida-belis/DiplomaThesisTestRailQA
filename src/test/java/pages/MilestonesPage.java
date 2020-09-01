@@ -7,11 +7,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class MilestonesPage extends BasePageFactory {
 
-    // Проверка, что milestones с названием 'MilestoneDiploma' отобразился на странице
-    @FindBy(xpath = "//a[text()='Cool']")
-    public WebElement stonesNameField;
-
-    // Нажатие на кнопку Edit
     @FindBy(xpath = "//a[text()='Edit']")
     public WebElement editStonesButton;
 
@@ -30,7 +25,6 @@ public class MilestonesPage extends BasePageFactory {
 
     @Override
     public boolean isPageOpened() {
-//        return stonesNameField.isDisplayed();
         return addMilestoneButton.isDisplayed();
     }
 }

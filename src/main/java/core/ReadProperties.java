@@ -20,7 +20,7 @@ public class ReadProperties {
     }
 
     public String getBrowserName() {
-        return properties.getProperty(  "browser");
+        return properties.getProperty("browser");
     }
 
     public boolean isHeadless() {

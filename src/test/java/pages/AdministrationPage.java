@@ -19,7 +19,7 @@ public class AdministrationPage extends BasePageFactory {
 
     @Override
     protected void openPage() {
-       browsersService.getDriver().get(browsersService.getBaseUrl() + "index.php?/admin/overview");
+        browsersService.getDriver().get(browsersService.getBaseUrl() + "index.php?/admin/overview");
     }
 
     @Override

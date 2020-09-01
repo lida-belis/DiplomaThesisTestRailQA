@@ -6,62 +6,62 @@ import models.MilestonesApi;
 import org.apache.http.HttpStatus;
 import org.testng.annotations.Test;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
 public class apiTest extends BaseTestApi {
+    int projectID;
 
     @Test
-    public void getMilestone1() {
-        String endpoint = "index.php?/api/v2/get_milestone/27";
+    public void getMilestone200() {
+        String endpoint = "index.php?/api/v2/get_milestone/{milestone_id}";
 
         given()
+                .pathParam("milestone_id", projectID)
                 .when()
                 .get(endpoint)
                 .then().log().body()
-                .body("id", equalTo(27))
                 .statusCode(HttpStatus.SC_OK);
     }
 
     @Test
-    public void getMilestone2() {
+    public void getMilestones400() {
         String endpoint = "index.php?/api/v2/get_milestones/1";
 
         given()
                 .when()
                 .get(endpoint)
                 .then().log().body()
+                .body("error", is("Field :project_id is not a valid or accessible project."))
                 .statusCode(HttpStatus.SC_BAD_REQUEST);
     }
 
     @Test
-    public void getMilestone3() {
-        String endpoint = "index.php?/api/v2/get_milestones/113";
+    public void getMilestones403() {
+        String endpoint = "index.php?/api/v2/get_milestones/25";
 
         given()
                 .when()
                 .get(endpoint)
                 .then().log().body()
+                .body("error", is("The requested project does not exist or you do not have the permissions to access it."))
                 .statusCode(HttpStatus.SC_FORBIDDEN);
     }
 
     @Test
-    public void addMilestones() {
-        String endpoint = "index.php?/api/v2/add_milestone/114";
+    public void addMilestone() {
+        String endpoint = "index.php?/api/v2/add_milestone/24";
 
         MilestonesApi project = new MilestonesApi.Builder()
                 .withName("Lida")
                 .build();
 
-        given()
+        projectID = given()
                 .body(project, ObjectMapperType.GSON)
                 .when()
                 .post(endpoint)
                 .then().log().body()
-                .statusCode(HttpStatus.SC_OK);
+                .statusCode(HttpStatus.SC_OK)
+                .extract().jsonPath().get("id");
     }
-
 }

@@ -7,7 +7,6 @@ import pages.DashboardPage;
 
 public class DashboardStep extends BaseStep {
 
-
     public DashboardStep(BrowsersService browsersService) {
         super(browsersService);
     }
@@ -19,7 +18,7 @@ public class DashboardStep extends BaseStep {
     }
 
     @Step
-    public void enterProject(){
+    public void enterProject() {
         DashboardPage dashboardPage = new DashboardPage(browsersService);
         dashboardPage.nameProjectButton.click();
     }

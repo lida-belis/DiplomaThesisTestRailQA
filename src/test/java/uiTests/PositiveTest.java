@@ -4,7 +4,6 @@ import baseEntity.BaseTest;
 import models.User;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.DashboardPage;
 import steps.*;
 
 public class PositiveTest extends BaseTest {

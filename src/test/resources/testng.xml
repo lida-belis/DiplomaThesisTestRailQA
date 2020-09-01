@@ -3,18 +3,19 @@
 <suite name="Parallel" thread-count="2" parallel="classes">
     <test name="start">
         <classes>
-            <class name="uiTests.EnvironmentTest"></class>
+            <class name="apiTests.apiTest"/>
+            <class name="uiTests.EnvironmentTest"/>
         </classes>
     </test>
     <test name="check">
         <classes>
-            <class name="uiTests.PositiveTest"></class>
-            <class name="uiTests.NegativeTest"></class>
+            <class name="uiTests.PositiveTest"/>
+            <class name="uiTests.NegativeTest"/>
         </classes>
     </test>
     <test name="finish">
         <classes>
-            <class name="uiTests.FinishTest"></class>
+            <class name="uiTests.FinishTest"/>
         </classes>
     </test>
 </suite>
