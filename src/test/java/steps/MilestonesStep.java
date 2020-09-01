@@ -9,6 +9,11 @@ import pages.EditMilestonesPage;
 import pages.MilestonesPage;
 import pages.OverviewPage;
 
+import java.io.File;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Paths;
+
 public class MilestonesStep extends BaseStep {
 
     public MilestonesStep(BrowsersService browsersService) {
@@ -43,8 +48,12 @@ public class MilestonesStep extends BaseStep {
         milestonesPage.editStonesButton.click();
         AddMilestonesPage addMilestonesPage = new AddMilestonesPage(browsersService);
         addMilestonesPage.dialogBox.click();
-        addMilestonesPage.downloadButton.click();
-        addMilestonesPage.fileUpload.sendKeys("C:\\Users\\DELL\\Downloads\\zoub1wL7Zo0-3");
+       // addMilestonesPage.downloadButton.click();
+        String path = "src/test/resources/zoub1wL7Zo0-3.jpg";
+
+        File file = new File(path);
+        String absolutePath = file.getAbsolutePath();
+        addMilestonesPage.fileUpload.sendKeys(absolutePath);
         addMilestonesPage.addImages.click();
         addMilestonesPage.addMilestoneButton.click();
     }
