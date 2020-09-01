@@ -5,7 +5,7 @@ import models.User;
 import org.testng.annotations.Test;
 import steps.*;
 
-public class EnviromentTest extends BaseTest {
+public class EnvironmentTest extends BaseTest {
 
     @Test
     public void addMilestonesTest() {
