@@ -81,6 +81,15 @@ public class MilestonesStep extends BaseStep {
     }
 
     @Step
+    public void upMessageStep() {
+        OverviewPage overviewPage = new OverviewPage(browsersService);
+        overviewPage.milestonesButton.click();
+        MilestonesPage milestonesPage = new MilestonesPage(browsersService);
+        milestonesPage.editStonesButton.click();
+
+    }
+
+    @Step
     public String getErrorMessage() {
         AddMilestonesPage addMilestonesPage = new AddMilestonesPage(browsersService);
         WebElement errorMessage = addMilestonesPage.errorMessage;

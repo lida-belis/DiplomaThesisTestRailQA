@@ -31,6 +31,15 @@ public class AddMilestonesPage extends BasePageFactory {
     @FindBy(xpath = "//div[text()='Field Name is a required field.']")
     public WebElement errorMessage2;
 
+    @FindBy(xpath = "//div[@class='icon-markdown-help']/parent::a")
+    public WebElement upMessage;
+
+    public String getToolTip() {
+        String message = upMessage.getAttribute("tooltip-text");
+        return message;
+    }
+
+
     public AddMilestonesPage(BrowsersService browsersService) {
         super(browsersService, false);
     }
