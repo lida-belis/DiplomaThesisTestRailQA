@@ -51,7 +51,7 @@ public class MilestonesStep extends BaseStep {
         MilestonesPage milestonesPage = new MilestonesPage(browsersService);
         milestonesPage.editStonesButton.click();
         AddMilestonesPage addMilestonesPage = new AddMilestonesPage(browsersService);
-        addMilestonesPage.startDateField.sendKeys("///");
+        addMilestonesPage.startDateField.sendKeys("...");
         addMilestonesPage.nameMilestonesField.click();
         addMilestonesPage.addMilestoneButton.click();
     }
@@ -63,7 +63,7 @@ public class MilestonesStep extends BaseStep {
         MilestonesPage milestonesPage = new MilestonesPage(browsersService);
         milestonesPage.editStonesButton.click();
         AddMilestonesPage addMilestonesPage = new AddMilestonesPage(browsersService);
-        addMilestonesPage.startDateField.sendKeys("31/12/1969");
+        addMilestonesPage.startDateField.sendKeys("31.12.1969");
         addMilestonesPage.nameMilestonesField.click();
         addMilestonesPage.nameMilestonesField.clear();
         addMilestonesPage.addMilestoneButton.click();
@@ -74,7 +74,7 @@ public class MilestonesStep extends BaseStep {
     public void edgeValue2() {
         AddMilestonesPage addMilestonesPage = new AddMilestonesPage(browsersService);
         addMilestonesPage.startDateField.clear();
-        addMilestonesPage.startDateField.sendKeys("1/1/1970");
+        addMilestonesPage.startDateField.sendKeys("1.1.1970");
         addMilestonesPage.nameMilestonesField.click();
         addMilestonesPage.addMilestoneButton.click();
 
