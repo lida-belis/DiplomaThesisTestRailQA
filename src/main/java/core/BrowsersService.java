@@ -30,8 +30,8 @@ public class BrowsersService {
                 chromeOptions.addArguments("--window-size=1920,1200");
                 chromeOptions.addArguments("--ignore-certificate-errors");
                 chromeOptions.addArguments("--silent");
-                chromeOptions.addArguments("--start-maximized");
-                chromeOptions.addArguments("--headless");
+              //  chromeOptions.addArguments("--start-maximized");
+              //  chromeOptions.addArguments("--headless");
 
                 driver = new ChromeDriver(chromeOptions);
                 driver.manage().window().setSize(new Dimension(1920, 1080));
