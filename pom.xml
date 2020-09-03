@@ -57,7 +57,6 @@
             <artifactId>json-path</artifactId>
             <version>4.2.0</version>
         </dependency>
-
     </dependencies>
     <build>
 
@@ -71,6 +70,10 @@
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
+                    <suiteXmlFiles>
+                        <!-- pass testng.xml files as argument from command line -->
+                        <file>src/test/resources/testng.xml</file>
+                    </suiteXmlFiles>
                 </configuration>
                 <dependencies>
                     <dependency>
