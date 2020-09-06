@@ -5,7 +5,6 @@ import core.BrowsersService;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import pages.AddMilestonesPage;
-import pages.EditMilestonesPage;
 import pages.MilestonesPage;
 import pages.OverviewPage;
 
