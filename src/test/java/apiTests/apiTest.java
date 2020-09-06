@@ -21,6 +21,8 @@ public class apiTest extends BaseTestApi {
                 .when()
                 .get(endpoint)
                 .then().log().body()
+                .body("name", is("Lida"))
+                .body("description", is("Hi, my name is Vladimir"))
                 .statusCode(HttpStatus.SC_OK);
     }
 
@@ -54,6 +56,7 @@ public class apiTest extends BaseTestApi {
 
         MilestonesApi project = new MilestonesApi.Builder()
                 .withName("Lida")
+                .withDescription("Hi, my name is Vladimir")
                 .build();
 
         milestoneID = given()
@@ -61,6 +64,8 @@ public class apiTest extends BaseTestApi {
                 .when()
                 .post(endpoint)
                 .then().log().body()
+                .body("name", is(project.getName()))
+                .body("description", is(project.getDescription()))
                 .statusCode(HttpStatus.SC_OK)
                 .extract().jsonPath().get("id");
     }

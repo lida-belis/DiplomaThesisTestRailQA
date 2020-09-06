@@ -1,8 +1,8 @@
 package models;
 
 public class MilestonesApi {
-    private int id;
     private String name;
+    private String description;
 
     public static class Builder {
         private MilestonesApi newMilestonesApi;
@@ -16,8 +16,8 @@ public class MilestonesApi {
             return this;
         }
 
-        public Builder withId(int id) {
-            newMilestonesApi.id = id;
+        public Builder withDescription(String description) {
+            newMilestonesApi.description = description;
             return this;
         }
 
@@ -26,12 +26,11 @@ public class MilestonesApi {
         }
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public String getName(String lida) {
+    public String getName() {
         return name;
     }
 
+    public String getDescription() {
+        return description;
+    }
 }
