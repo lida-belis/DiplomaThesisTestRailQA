@@ -13,6 +13,26 @@ public class apiTest extends BaseTestApi {
     int milestoneID;
 
     @Test
+    public void addMilestone() {
+        String endpoint = "index.php?/api/v2/add_milestone/24";
+
+        MilestonesApi project = new MilestonesApi.Builder()
+                .withName("Lida")
+                .withDescription("Hi, my name is Vladimir")
+                .build();
+
+        milestoneID = given()
+                .body(project, ObjectMapperType.GSON)
+                .when()
+                .post(endpoint)
+                .then().log().body()
+                .body("name", is(project.getName()))
+                .body("description", is(project.getDescription()))
+                .statusCode(HttpStatus.SC_OK)
+                .extract().jsonPath().get("id");
+    }
+
+    @Test
     public void getMilestone200() {
         String endpoint = "index.php?/api/v2/get_milestone/{milestone_id}";
 
@@ -48,25 +68,5 @@ public class apiTest extends BaseTestApi {
                 .then().log().body()
                 .body("error", is("The requested project does not exist or you do not have the permissions to access it."))
                 .statusCode(HttpStatus.SC_FORBIDDEN);
-    }
-
-    @Test
-    public void addMilestone() {
-        String endpoint = "index.php?/api/v2/add_milestone/24";
-
-        MilestonesApi project = new MilestonesApi.Builder()
-                .withName("Lida")
-                .withDescription("Hi, my name is Vladimir")
-                .build();
-
-        milestoneID = given()
-                .body(project, ObjectMapperType.GSON)
-                .when()
-                .post(endpoint)
-                .then().log().body()
-                .body("name", is(project.getName()))
-                .body("description", is(project.getDescription()))
-                .statusCode(HttpStatus.SC_OK)
-                .extract().jsonPath().get("id");
     }
 }
