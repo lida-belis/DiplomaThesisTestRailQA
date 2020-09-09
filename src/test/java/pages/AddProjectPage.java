@@ -1,11 +1,11 @@
 package pages;
 
-import baseEntity.BasePageFactory;
+import baseEntity.BasePage;
 import core.BrowsersService;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class AddProjectPage extends BasePageFactory {
+public class AddProjectPage extends BasePage {
 
     @FindBy(id = "accept")
     public WebElement pageIdentifier;

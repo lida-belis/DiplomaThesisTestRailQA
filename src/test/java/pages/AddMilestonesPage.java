@@ -1,11 +1,11 @@
 package pages;
 
-import baseEntity.BasePageFactory;
+import baseEntity.BasePage;
 import core.BrowsersService;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class AddMilestonesPage extends BasePageFactory {
+public class AddMilestonesPage extends BasePage {
 
     @FindBy(id = "name")
     public WebElement nameMilestonesField;

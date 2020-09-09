@@ -1,11 +1,11 @@
 package pages;
 
-import baseEntity.BasePageFactory;
+import baseEntity.BasePage;
 import core.BrowsersService;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class LoginPage extends BasePageFactory {
+public class LoginPage extends BasePage {
 
     @FindBy(id = "button_primary")
     public WebElement pageIdentifier;

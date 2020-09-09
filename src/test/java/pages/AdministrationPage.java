@@ -1,11 +1,11 @@
 package pages;
 
-import baseEntity.BasePageFactory;
+import baseEntity.BasePage;
 import core.BrowsersService;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class AdministrationPage extends BasePageFactory {
+public class AdministrationPage extends BasePage {
 
     @FindBy(id = "navigation-sub-projects")
     public WebElement projectButton;

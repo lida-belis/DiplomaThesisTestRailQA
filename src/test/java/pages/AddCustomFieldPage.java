@@ -1,11 +1,11 @@
 package pages;
 
-import baseEntity.BasePageFactory;
+import baseEntity.BasePage;
 import core.BrowsersService;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class AddCustomFieldPage extends BasePageFactory {
+public class AddCustomFieldPage extends BasePage {
 
     @FindBy(xpath = "//a[@href='index.php?/admin/fields/add/1']")
     public WebElement addCaseField;
