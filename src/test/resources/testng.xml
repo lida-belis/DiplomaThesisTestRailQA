@@ -3,7 +3,7 @@
 <suite name="Parallel" thread-count="2" parallel="classes">
     <test name="start">
         <classes>
-            <class name="apiTests.apiTest"/>
+            <class name="apiTests.ApiTest"/>
             <class name="uiTests.EnvironmentTest"/>
         </classes>
     </test>
